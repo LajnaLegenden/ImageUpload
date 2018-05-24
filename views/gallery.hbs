@@ -1,0 +1,40 @@
+{{!< default}}
+
+{{#contentFor 'head'}} 
+<link rel="stylesheet" href="styles/galleryStyle.css">
+{{/contentFor}}
+{{#contentFor 'script'}} 
+<script src="js/galleryScript.js"></script>
+{{/contentFor}}
+<main class="container">
+    <h1>Gallery</h1>
+    <div class="row">
+        {{#each items}}
+        <div class="col-lg-3 col-sm-4 col-xs-6">
+            <a title="Image {{add @index}}" href="#">
+                <img class="thumbnail img-responsive" alt="{{add @index}}" src="{{this}}">
+            </a>
+        </div>
+        {{/each}}
+
+    </div>
+    <div class="space"><p></p></div>
+    <div class="space"><p></p></div>
+</main>
+{{!-- Image PopUp --}}
+<div tabindex="-1" class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal">×</button>
+                <h3 class="modal-title">Heading</h3>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

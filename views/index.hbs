@@ -1,0 +1,32 @@
+{{!< default}}
+
+{{#contentFor 'head'}} 
+  <link rel="stylesheet" href="styles/indexStyle.css">
+{{/contentFor}}
+{{#contentFor 'script'}} 
+<script src="js/indexScript.js"></script>
+{{/contentFor}}
+
+  <main class="container">
+    <h1>Welcome to my gallery</h1>
+    <div class="slideshow-container">
+      {{#each items}}
+      <div class="mySlides">
+        <div class="numbertext">{{val}}</div>
+        <img src="{{this}}" alt="{{add @index}}" style="width:100%">
+      </div>
+      {{/each}}
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
+      <div class="col3">
+        <h3>Upload your own pictures</h3>
+        <p>Want to upload your picture to us? Click <a href="/upload"> this link </a> to go to the upload page</p>
+      </div>
+      <div class="col3">
+        <h3>Browser the gallery</h3>
+        <p>Take a look at the beautiful pictures uploaded by our users <a href="/gallery"> here</a></p>
+      </div>
+      
+  </main>

@@ -1,0 +1,177 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+html {
+  padding-bottom: 150px;
+  padding-top: 5%;
+  position: relative;
+}
+
+.space{
+  height: 150px;
+  min-height: 150px;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  background-image: url('../staticImages/1526728698791.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container {
+  background-color: rgba(245, 245, 245, 0.5);
+  margin-bottom: 15px;
+  min-height: 550px;
+  border-radius: 5px;
+}
+
+a:link,
+a:hover,
+a:visited {
+  color: rgb(221, 122, 30);
+}
+
+.fa {
+  color: white;
+  margin-left: 10px;
+  transition: color 0.5s;
+}
+
+.fa-facebook:hover {
+  color: rgb(28, 74, 202);
+}
+
+.fa-steam:hover {
+  color: rgb(153, 0, 255);
+}
+
+.fa-flickr:hover {
+  color: rgb(141, 54, 80);
+}
+
+.fa-twitter:hover {
+  color: rgb(110, 197, 226);
+}
+
+/*Nav styling*/
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: rgb(221, 122, 30);
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.footer {
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  min-height: 150px;
+  background-color: #333;
+  width: 100% !important;
+  display: grid;
+  color: white;
+  overflow: hidden;
+}
+
+.footer>.col {
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  h1 {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+#social {
+  grid-area: 'social';
+}
+
+#contact {
+  grid-area: 'contact';
+}
+
+#thanks {
+  grid-area: 'thanks';
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    grid-template-areas: 'social' 'contact' 'thanks';
+    
+  }
+  .footer>.col {
+  width: 100%;
+
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .footer {
+    grid-template-areas: 'social contact thanks';
+    max-height: 210px;
+  }
+  .footer>.col {
+    width: 100%;
+  }
+}

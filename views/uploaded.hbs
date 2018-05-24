@@ -1,0 +1,14 @@
+{{!< default}}
+
+{{#contentFor 'head'}} 
+  <link rel="stylesheet" href="styles/uploadedStyle.css">
+{{/contentFor}}
+{{#contentFor 'script'}} 
+
+{{/contentFor}}
+
+<div class="container">
+    <h2>You uploaded a file!</h2>
+    <h3>Thanks!</h3>
+ {{#if file}} <img class="img-responsive" src="{{file}}" alt="Your uploaded image">
+    {{/if}}</div>

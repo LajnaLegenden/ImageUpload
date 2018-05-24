@@ -1,0 +1,18 @@
+{{!< default}}
+  <div class="container">
+    <h1>Upload an image to the Gallery</h1>
+    {{#if msg}}
+    <div class="alet alert-info">{{msg}}</div>
+    {{/if}} 
+    <form action="/upload/post" method="POST" enctype="multipart/form-data" style="margin:auto;">
+      <div class="custom-file">
+          <label class="custom-file-label" for="customFile">Choose file</label>
+<br>
+  <input name="myImage" type="file" class="custom-file-input" id="customFile">
+</div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+    <br>
+  </div>
+<div class="space"><p></p></div>
+<div class="space"><p></p></div>

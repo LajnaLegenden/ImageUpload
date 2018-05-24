@@ -1,0 +1,24 @@
+Dokumentation
+
+Syfte
+Meningen med hemsidan är att vem som helt ska kunna ladda upp en bild. För att detta ska kunna uppnås så ska jag använda mig av node js och express. Det ska finns ett bildspel på startsidan som visar 3 av bilderna. Sedan ska jag ha information på startsidan som leder till uppladdningssidan och galleriet.
+
+Begränsingnar
+Den enda begränsningen jag kan se är att man inte kan söka eller filtrera bilder. Detta är på grund av för att det skulle fungera så behövs det en databas vilket det inte fanns tid eller kunskap till att sätta upp den.
+
+Tidsplan
+Vecka 1-4 - Lära sig och skriva node serverns bas funktioner
+Vecka 5 - Skriva filuppladdning funktioner på servern med Multer
+Vecka 6-8 Skriva routes och hbs filer för att rendera HTML dynamiskt
+Vecka 9 Beta test och buggfixar / Dokumentation
+
+Tester
+Jag fick 2 personer att testa mi färdiga hemsida. Båda tyckte att den var bra designad, enkel att förstå och en användbar sida. De behövde inte fråga efter funktioner eller leta efter något. Båda gav mig full pot. Efter lite buggfixar får jag också inga fel i html / css validation och inga felmeddelanden i konsolen. Testad på chrome, firefox och edge.
+
+Innehåll
+
+Sidan ska ha 4 olika sidor. Index.hbs som är startsidan med bildspelet som genereras på servern och skickar bara de bilder som behövs. Gallery.hbs som är galleriet. Det kommer också bli dynamiskt genererade på servern innan den skickas till klienten. Upload.hbs är uppladdningssidan där man kan ladda upp sina filer. Uploaded.hbs är konfirmations sidan där du kommer efter att ha laddat upp en fil med din uppladdade bild som visas
+
+Jag har skapat det jag satte mig för att göra. Index sidan och galleriet blev som jag tänkte. Jag använde bootstrap i mitt galleri för att hantera det okända numret av bilder. Efter användartester fick jag höra att sidan hade ett bra färgschema, fungerade på olika enheter såsom tablets och mobiler, samt att alla funktioner de förväntade sig fanns på “rätt” plats. Alla validatorer gick igenom utan problem. Jag använde node som backend eftersom det är samma språk som javascript så man kan enkelt lära sig det. Med hjälp av express frameworket så fick jag webbservern klar hyfsat enkelt. Jag har även använt javascript biblioteket jQuery för att enklare ändra css och att slippa skriva document.getlalala biten hela tiden. 
+Utvärdering
+Jag blev väldigt nöjd med mitt resultat. Det är lite annat än vad jag brukar skapa. Även om det fortfarande är orange så har jag inte bara grått länge. Jag valde att ge min bakgrund en blur effekt i photoshop eftersom annars tar den lite för mycket uppmärksamhet, och jag tycker att det blev bättre än väntat när jag la på en 50% opacitet på min main container. JAg blev också extra nöjd eftersom jag utmanade mig själv med en jobbig uppgift, att programmera servern. JAg hade några problem med att visa bilderna från mitt galleri men det fixade jag med att servern skickar med en array med bilder till klienten som sen frågar om dem av servern. Jag hade även ett problem med min footer då den täckte en del av sidan, som jag fixade med ett lite fult knep (lägga en div som endast ska agera som plats) men eftersom jag inte hade tid att fixa detta blev det så. En förbättring är att jag skulle kunna ha implementerat en mongoDB databas för att även kunna visa metadata och fotografen som tagit bilderna, och då också ha en sökfunktion. Det tror jag hade gett hemsidan en bättre upplevelse  när det finns många bilder på servern.
